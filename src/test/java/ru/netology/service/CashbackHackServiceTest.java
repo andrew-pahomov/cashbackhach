@@ -9,18 +9,18 @@ class CashbackHackServiceTest {
     @Test
     public void testRemain() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 2000;
+        int amount = 1000;
         int actual = service.remain(amount);
-        int expected = 1000;
+        int expected = 0;
         assertEquals(expected, actual);
     }
 
     @Test
     public void testRemainWithCashback() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 2200;
+        int amount = 900;
         int actual = service.remain(amount);
-        int expected = 800;
+        int expected = 100;
         assertEquals(expected, actual);
     }
 }
